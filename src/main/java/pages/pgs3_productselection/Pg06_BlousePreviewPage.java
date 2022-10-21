@@ -11,7 +11,7 @@ import java.time.Duration;
 public class Pg06_BlousePreviewPage {
     private WebDriver driver ;
     private By dataSheetText            = By.xpath("//h3[@class=\"page-product-heading\" and text()=\"Data sheet\"]");
-    private By addToCartButton          = By.xpath("//button[@type=\"submit\" and @class=\"exclusive\"]");
+    private By addToCartButton          = By.xpath("//span[text()=\"Add to cart\"]");
     private By proceedToCheckOutBtnLyr  = By.xpath("//a[@title=\"Proceed to checkout\"]");
 
     public Pg06_BlousePreviewPage(WebDriver driver) {
@@ -21,7 +21,7 @@ public class Pg06_BlousePreviewPage {
         return driver.findElement(dataSheetText).isDisplayed();
     }
 
-    public Pg06_BlousePreviewPage clickOnAddToCartButton(){
+    public Pg06_BlousePreviewPage clickOnAddToCartButtonFromBlousePreviewPage(){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(addToCartButton));
         driver.findElement(addToCartButton).click();

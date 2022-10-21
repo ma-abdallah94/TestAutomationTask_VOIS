@@ -1,18 +1,19 @@
-import base.BaseTest;
+package testcases;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.pgs0_home.Pg00_HomePage;
 import testdatautils.GettingPropertyData;
 
-public class LoginTest extends BaseTest {
+public class TClass2_LoginTest extends BaseTest {
 
     @Test
     public void TestingLoginFunctionality(){
         Pg00_HomePage pg0HomePage = new Pg00_HomePage(driver);
         String actualResult = pg0HomePage.load()
                 .clickOnHomePageSignInButton()
-                .regularLogin(GettingPropertyData.existedEmail()
-                        , GettingPropertyData.password())
+                .login(  GettingPropertyData.existedEmail()
+                        ,GettingPropertyData.password())
                 .clickOnAuthPageSignInButton()
                 .getMyAccountPageTitle();
 

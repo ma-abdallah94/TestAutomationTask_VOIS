@@ -32,6 +32,7 @@ public class Pg01_AuthenticationPage {
     public Pg02_CreateAnAccountPage clickOnCreateAnAccountButton(){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
         wait.until(ExpectedConditions.visibilityOfElementLocated(createAnAccountBtn));
+
         driver.findElement(createAnAccountBtn).click();
         return new Pg02_CreateAnAccountPage(driver);
     }
@@ -41,7 +42,7 @@ public class Pg01_AuthenticationPage {
         return new Pg02_CreateAnAccountPage(driver);
     }
 
-    public Pg01_AuthenticationPage regularLogin(String existedEmail , String password ) {
+    public Pg01_AuthenticationPage login(String existedEmail , String password ) {
         setExistedEmail(existedEmail);
         setPassword(password);
         return this;
@@ -49,13 +50,17 @@ public class Pg01_AuthenticationPage {
     public Pg03_MyAccountPage clickOnAuthPageSignInButton(){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
         wait.until(ExpectedConditions.visibilityOfElementLocated(signInBtn));
+
         driver.findElement(signInBtn).click();
         return new Pg03_MyAccountPage(driver);
     }
 
-    public Pg08_DeliveryAddressPage clickSignInButtonInCheckoutState(){
+
+
+    public Pg08_DeliveryAddressPage clickSignInButtonForCheckoutProcedure(){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
         wait.until(ExpectedConditions.visibilityOfElementLocated(signInBtn));
+
         driver.findElement(signInBtn).click();
         return new Pg08_DeliveryAddressPage(driver);
     }

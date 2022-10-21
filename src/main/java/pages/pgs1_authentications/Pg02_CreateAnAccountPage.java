@@ -32,7 +32,8 @@ public class Pg02_CreateAnAccountPage {
         this.driver=driver;
     }
 
-
+    /* The purpose of this method is to shortcut the registration steps into one step taking all
+     the data to minimize the maximum number of UI steps to maintain the test performance .   */
     public Pg02_CreateAnAccountPage accountRegistration(String firstName , String lastName , String password , String birthDay
             , String birthMonth , String birthYear , String address , String cityName , String stateName
             , String zipCode , String countryName , String mobilePhoneNumber ){

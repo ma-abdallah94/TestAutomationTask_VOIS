@@ -17,7 +17,7 @@ public class Pg07_ShoppingCartPage {
         this.driver=driver;
     }
 
-    public Pg01_AuthenticationPage clickOnProceedToCheckoutButtonLoggedOutUserInOrderSummary(){
+    public Pg01_AuthenticationPage clickOnProceedToCheckoutButtonLoggedOutUserInShoppingCart(){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(proceedToCheckOutSummary));
         driver.findElement(proceedToCheckOutSummary).click();

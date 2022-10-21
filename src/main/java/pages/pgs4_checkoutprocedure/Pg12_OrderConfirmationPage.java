@@ -7,7 +7,7 @@ public class Pg12_OrderConfirmationPage {
 
     private WebDriver driver;
     private By orderCompleted = By.className("cheque-indent");
-    //strong[text()="Your order on My Store is complete."]
+
 
     public Pg12_OrderConfirmationPage(WebDriver driver){
         this.driver=driver;

@@ -1,4 +1,4 @@
-package base;
+package testcases;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
@@ -7,7 +7,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import java.time.Duration;
+
+/**
+ * A point of view : Sometimes we don't have to create the testclasses.BaseTest Class and initialize driver on any test class
+ * so using baseTest in case we are building  a full framework dealing with cookies ,cucumber , screenshots,..etc
+ * For more code organizing .
+ */
 
 public class BaseTest {
 
@@ -17,7 +22,11 @@ public class BaseTest {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.manage().window().setSize(new Dimension(1024 , 768));
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); // It Works fine with this project but not the best practice
+
+        /* ImplicitlyWait Works fine with this project , But it's not the best practice in case of shadow DOM
+        Driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        So We will use Explicitly Waits or Fluent Waits */
+
         return driver ;
     }
 

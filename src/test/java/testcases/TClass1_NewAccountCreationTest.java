@@ -1,11 +1,12 @@
-import base.BaseTest;
+package testcases;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.pgs0_home.Pg00_HomePage;
 import testdatautils.GettingPropertyData;
 
 
-public class NewAccountCreationTest extends BaseTest {
+public class TClass1_NewAccountCreationTest extends BaseTest {
 
     /**
      * The Account Creation Test Case Will be executed once per Email statically
@@ -16,25 +17,26 @@ public class NewAccountCreationTest extends BaseTest {
      */
 
 
-    // This test will run one time for each entry
+    // This test will run one time for each email entry
     @Test
     public void createNewAccountUsingThePropertyFile(){
         Pg00_HomePage pg0HomePage = new Pg00_HomePage(driver);
         String actualResult = pg0HomePage.load()
                 .clickOnHomePageSignInButton()
                 .createAccountEmailEntryStep(GettingPropertyData.newEmail())
-                .accountRegistration(GettingPropertyData.firstName()
-                        ,GettingPropertyData.lastName()
-                        ,GettingPropertyData.password()
-                        ,GettingPropertyData.birthdateDay()
-                        ,GettingPropertyData.birthdateMonth()
-                        ,GettingPropertyData.birthdateYear()
-                        ,GettingPropertyData.address()
-                        ,GettingPropertyData.city()
-                        ,GettingPropertyData.state()
-                        ,GettingPropertyData.zipCode()
-                        ,GettingPropertyData.country()
-                        ,GettingPropertyData.mobilePhone())
+                .accountRegistration
+                                (GettingPropertyData.firstName()
+                                ,GettingPropertyData.lastName()
+                                ,GettingPropertyData.password()
+                                ,GettingPropertyData.birthdateDay()
+                                ,GettingPropertyData.birthdateMonth()
+                                ,GettingPropertyData.birthdateYear()
+                                ,GettingPropertyData.address()
+                                ,GettingPropertyData.city()
+                                ,GettingPropertyData.state()
+                                ,GettingPropertyData.zipCode()
+                                ,GettingPropertyData.country()
+                                ,GettingPropertyData.mobilePhone())
                 .clickOnRegisterButton()
                 .getMyAccountPageTitle();
 
@@ -44,14 +46,15 @@ public class NewAccountCreationTest extends BaseTest {
     }
 
 
-    // Only Changed the email , We can change other data entries with faker anytime
+    // In this test I Only Changed the email , We can change other data entries with faker as we wish
     @Test
     public void createNewAccountUsingFakeEmailAddress(){
         Pg00_HomePage pg0HomePage = new Pg00_HomePage(driver);
         String actualResult = pg0HomePage.load()
                 .clickOnHomePageSignInButton()
                 .createAccountUsingFakeEmail()
-                .accountRegistration(GettingPropertyData.firstName()
+                .accountRegistration
+                        (GettingPropertyData.firstName()
                         ,GettingPropertyData.lastName()
                         ,GettingPropertyData.password()
                         ,GettingPropertyData.birthdateDay()

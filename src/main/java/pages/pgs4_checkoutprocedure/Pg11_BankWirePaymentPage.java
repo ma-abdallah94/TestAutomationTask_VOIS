@@ -15,11 +15,11 @@ public class Pg11_BankWirePaymentPage {
         this.driver=driver;
     }
 
-    public Pg11_BankWirePaymentPage clickOnIConfirmMyOrderButton() {
+    public Pg12_OrderConfirmationPage clickOnIConfirmMyOrderButton() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(iConfirmMyOrderButton));
         driver.findElement(iConfirmMyOrderButton).click();
-        return new Pg11_BankWirePaymentPage(driver);
+        return new Pg12_OrderConfirmationPage(driver);
     }
 
 
