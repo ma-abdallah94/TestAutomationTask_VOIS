@@ -1,4 +1,4 @@
-package pages;
+package pages.pgs1_authentications;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,11 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.pgs2_accountsettings.Pg03_MyAccountPage;
 
 import java.time.Duration;
 
 
-public class CreateAnAccountPage {
+public class Pg02_CreateAnAccountPage {
     private WebDriver driver ;
     private By mrRadioButton            = By.id("id_gender1"); //Unique ID
     private By firstNameInputBox        = By.xpath("//input[@id=\"customer_firstname\"]");
@@ -27,14 +28,14 @@ public class CreateAnAccountPage {
     private By mobilePhoneInputBox      = By.cssSelector("#phone_mobile");
     private By registerButton           = By.id("submitAccount");
 
-    public CreateAnAccountPage(WebDriver driver) {
+    public Pg02_CreateAnAccountPage(WebDriver driver) {
         this.driver=driver;
     }
 
 
-    public CreateAnAccountPage accountRegistration(String firstName , String lastName , String password , String birthDay
+    public Pg02_CreateAnAccountPage accountRegistration(String firstName , String lastName , String password , String birthDay
             , String birthMonth , String birthYear , String address , String cityName , String stateName
-            ,String zipCode , String countryName , String mobilePhoneNumber ){
+            , String zipCode , String countryName , String mobilePhoneNumber ){
         clickOnMrGenderRadioButton();
         setFirstNameInput(firstName);
         setLastNameInput(lastName);
@@ -52,9 +53,13 @@ public class CreateAnAccountPage {
     }
 
     public void clickOnMrGenderRadioButton(){
+        WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
+        wait.until(ExpectedConditions.visibilityOfElementLocated(mrRadioButton));
         driver.findElement(mrRadioButton).click();
     }
     public void setFirstNameInput(String firstName){
+        WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
+        wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameInputBox));
         driver.findElement(firstNameInputBox).sendKeys(firstName);
     }
     public void setLastNameInput(String lastName){
@@ -79,6 +84,8 @@ public class CreateAnAccountPage {
         selectYear.selectByValue(birthYear);
     }
     public void setAddress(String address){
+        WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
+        wait.until(ExpectedConditions.visibilityOfElementLocated(addressInputBox));
         driver.findElement(addressInputBox).sendKeys(address);
     }
     public void setCityName(String cityName){
@@ -90,6 +97,8 @@ public class CreateAnAccountPage {
         selectState.selectByVisibleText(stateName);
     }
     public void zipCodeInput(String zipCode){
+        WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
+        wait.until(ExpectedConditions.visibilityOfElementLocated(zipCodeInputBox));
         driver.findElement(zipCodeInputBox).sendKeys(zipCode);
     }
     public void countrySelection(String countryName){
@@ -98,12 +107,16 @@ public class CreateAnAccountPage {
         selectCountry.selectByVisibleText(countryName);
     }
     public void setMobilePhoneNumber(String mobilePhoneNumber){
+        WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
+        wait.until(ExpectedConditions.visibilityOfElementLocated(mobilePhoneInputBox));
         driver.findElement(mobilePhoneInputBox).sendKeys(mobilePhoneNumber);
     }
 
-    public MyAccountPage clickOnRegisterButton(){
+    public Pg03_MyAccountPage clickOnRegisterButton(){
+        WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
+        wait.until(ExpectedConditions.visibilityOfElementLocated(registerButton));
         driver.findElement(registerButton).click();
-        return new MyAccountPage(driver);
+        return new Pg03_MyAccountPage(driver);
     }
 
 

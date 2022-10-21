@@ -17,7 +17,7 @@ public class BaseTest {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.manage().window().setSize(new Dimension(1024 , 768));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15)); // It Works fine with this project but not the best practice
         return driver ;
     }
 

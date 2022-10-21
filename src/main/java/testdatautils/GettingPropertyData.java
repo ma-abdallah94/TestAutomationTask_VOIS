@@ -9,7 +9,7 @@ import java.util.Properties;
  */
 
 public class GettingPropertyData {
-    private Properties properties;
+    private static Properties properties;
     private static GettingPropertyData gettingPropertyData;
 
     private GettingPropertyData() {
@@ -23,45 +23,45 @@ public class GettingPropertyData {
         return gettingPropertyData;
     }
 
-    public String baseURL() {
+    public static String baseURL() {
         String property= properties.getProperty("BaseURL");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't  find the Base URL ") ;
     }
 
-    public String newEmail() {
+    public static String newEmail() {
         String property= properties.getProperty("NewEmail");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find the New Email Entry ") ;
     }
 
-    public String firstName() {
+    public static String firstName() {
         String property= properties.getProperty("FirstName");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find the FirstName ") ;
     }
 
-    public String lastName() {
+    public static String lastName() {
         String property= properties.getProperty("LastName");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find the LastName ") ;
     }
 
-    public String existedEmail() {
+    public static String existedEmail() {
         String property= properties.getProperty("ExistedEmail");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find the Email ") ;
     }
 
 
-    public String password() {
+    public static String password() {
         String property= properties.getProperty("Password");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any passwords ") ;
     }
 
 
-    public String birthdateDay() {
+    public static String birthdateDay() {
         String property= properties.getProperty("BirthdateDay");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any days entries ") ;
@@ -69,51 +69,51 @@ public class GettingPropertyData {
 
 
 
-    public String birthdateMonth() {
+    public static String birthdateMonth() {
         String property= properties.getProperty("BirthdateMonth");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any months entries ") ;
     }
 
 
-    public String birthdateYear() {
+    public static String birthdateYear() {
         String property= properties.getProperty("BirthdateYear");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any years entries ") ;
     }
 
 
-    public String address() {
+    public static String address() {
         String property= properties.getProperty("Address");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any addresses ") ;
     }
 
-    public String city() {
+    public static String city() {
         String property= properties.getProperty("City");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any cities ") ;
     }
 
-    public String state() {
+    public static String state() {
         String property= properties.getProperty("State");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any States ") ;
     }
 
-    public String zipCode() {
+    public static String zipCode() {
         String property= properties.getProperty("ZipCode");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any ZIP Codes ") ;
     }
 
-    public String country() {
+    public static String country() {
         String property= properties.getProperty("Country");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any Countries ") ;
     }
 
-    public String mobilePhone() {
+    public static String mobilePhone() {
         String property= properties.getProperty("MobilePhone");
         if ( property != null ) return property;
         throw new RuntimeException("Couldn't find any Mobile Phones  ") ;
