@@ -7,8 +7,9 @@ import testdatautils.GettingPropertyData;
 
 public class TClass2_LoginTest extends BaseTest {
 
+    // This Test to use the registered account
     @Test
-    public void TC2_TestingLoginFunctionality(){
+    public void tc2_TestingLoginFunctionality(){
         Pg00_HomePage pg0HomePage = new Pg00_HomePage(driver);
         String actualResult = pg0HomePage.load()
                 .clickOnHomePageSignInButton()

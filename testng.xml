@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestAutomationTask_VOIS" >
+    <test name="Testing Task Scenarios With Different TestCases " >
+        <classes>
+            <class name="testcases.TClass1_NewAccountCreationTest"/>
+            <class name="testcases.TClass2_LoginTest" />
+            <class name="testcases.TClass3_PurchasingTestScenarios" />
+        </classes>
+    </test>
+</suite>
+
+

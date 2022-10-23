@@ -28,6 +28,7 @@ public class Pg00_HomePage {
         return this;
     }
 
+    // Signing in
     public Pg01_AuthenticationPage clickOnHomePageSignInButton(){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
         wait.until(ExpectedConditions.visibilityOfElementLocated(signInBtn));
@@ -35,6 +36,7 @@ public class Pg00_HomePage {
         return new Pg01_AuthenticationPage(driver);
     }
 
+    // Selecting Blouses Product From The Header
     public Pg05_BlousesPage selectingBlousesInWomenSection(){
         WebElement womenSectionElement = driver.findElement(headerWomenSection);
         Actions actions = new Actions(driver);

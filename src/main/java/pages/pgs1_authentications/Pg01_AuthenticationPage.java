@@ -85,6 +85,7 @@ public class Pg01_AuthenticationPage {
         driver.findElement(emailCreationBox).sendKeys(fakeEmail);
     }
 
+    //I was Using this function in testing and shortcut some pages
     public Pg01_AuthenticationPage loadAuthPage(){
         driver.get(GettingPropertyData.getInstance().baseURL()+"?controller=my-account");
         return this;

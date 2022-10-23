@@ -25,9 +25,16 @@ public class Pg12_OrderConfirmationPage {
      This solution helped me to extract the order reference code to Assert and Validate the Order
      Link to this solution : https://stackoverflow.com/questions/63649002/text-content-located-in-second-br-tag-cant-be-printed */
     public String printInnerHTMLToGetReferenceCodeFromConfirmationPage(){
+        // Declaring WebElement Of the <br> Text
         WebElement referenceVanished = driver.findElement(By.xpath("//*[text()[contains(.,'- Do not forget to insert your order reference')]]"));
-        String[] myTextArray = referenceVanished.getAttribute("innerHTML").split("<br>");
-        String[] referenceCodeInOrderConfirmation = myTextArray[5].split(" ");
+
+        // Getting All Text inside the <br> tag
+        String[] brTextArray = referenceVanished.getAttribute("innerHTML").split("<br>");
+
+        // Finding Our Desired text which contains the reference code by splitting words by a SPACE and storing into Array of strings
+        String[] referenceCodeInOrderConfirmation = brTextArray[5].split(" ");
+
+        //returning the word with index[9] which has The order Reference Code
        return referenceCodeInOrderConfirmation[9];
     }
 
@@ -36,6 +43,9 @@ public class Pg12_OrderConfirmationPage {
         driver.findElement(myAccountPageBtn).click();
         return new Pg03_MyAccountPage(driver);
     }
+
+
+
 
 
 

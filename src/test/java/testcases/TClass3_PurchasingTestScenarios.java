@@ -8,13 +8,13 @@ import testdatautils.GettingPropertyData;
 
 /**
  * I created Some Low Level Test Cases To Validate Each Scenario Of The Task
- * TC08 > Is End-To-End Test Case Running From Scenario Number 1 To Number 6
+ * tc08 > Is End-To-End Test Case Running From Scenario Number 1 To Number 6
  */
 
 public class TClass3_PurchasingTestScenarios extends BaseTest {
 
     @Test (description = "This Test Method For Navigating To Women/Blouses Section ")
-    public void TC3_NavigatingToBlousesInWomenSectionWhileLoggedOutTest(){
+    public void tc3_NavigatingToBlousesInWomenSectionWhileLoggedOutTest(){
         Pg00_HomePage homePage = new Pg00_HomePage(driver);
         String actualResult = homePage.load()
                                       .selectingBlousesInWomenSection()
@@ -26,7 +26,7 @@ public class TClass3_PurchasingTestScenarios extends BaseTest {
     }
 
     @Test (description = "This Test Method is For Validating The Blouse Selection")
-    public void TC4_SelectingBlouseLoggedOutUserTest(){
+    public void tc4_SelectingBlouseLoggedOutUserTest(){
         Pg00_HomePage homePage = new Pg00_HomePage(driver);
 
         boolean isItSelected = homePage.load()
@@ -38,7 +38,7 @@ public class TClass3_PurchasingTestScenarios extends BaseTest {
     }
 
     @Test (description = "This Test Method Is For Following The Checkout Procedure Only " )
-    public void TC5_FollowingCheckoutProcedure(){
+    public void tc5_FollowingCheckoutProcedure(){
         Pg00_HomePage homePage = new Pg00_HomePage(driver);
         homePage.load()
                 .selectingBlousesInWomenSection()
@@ -54,7 +54,7 @@ public class TClass3_PurchasingTestScenarios extends BaseTest {
     }
 
     @Test (description = "Confirming That The Purchase Process Is Completed " )
-    public void TC6_ConfirmingOrderBySelectingBankWireOption(){
+    public void tc6_ConfirmingOrderBySelectingBankWireOption(){
         Pg00_HomePage homePage = new Pg00_HomePage(driver);
         String actualResult =homePage.load()
                 .selectingBlousesInWomenSection()
@@ -78,7 +78,7 @@ public class TClass3_PurchasingTestScenarios extends BaseTest {
     }
 
     @Test (description = "Order Validating By Existing User ")
-    public void TC7_ValidateOrderWasPlacedInOrderHistoryPage(){
+    public void tc7_ValidateOrderWasPlacedInOrderHistoryPage(){
         Pg00_HomePage homePage = new Pg00_HomePage(driver);
         String orderReferenceCodeInConfirmationPage =homePage.load()
                 .selectingBlousesInWomenSection()
@@ -98,7 +98,7 @@ public class TClass3_PurchasingTestScenarios extends BaseTest {
         Pg12_OrderConfirmationPage confirmationPage = new Pg12_OrderConfirmationPage(driver);
         String orderReferenceCodeInAccountHistoryPage = confirmationPage
                                             .clickOnMyAccountPage()
-                                            .clickOnOrderHistoryDetails()
+                                            .clickOnOrderHistoryDetailsTab()
                                             .gettingRequestedOrderText();
         Assert.assertEquals(
                  orderReferenceCodeInConfirmationPage
@@ -107,7 +107,7 @@ public class TClass3_PurchasingTestScenarios extends BaseTest {
     }
 
     @Test (description = "An End-To-End Test Starting From Home Page And Executing From 1 To 6 Task's Scenarios " )
-    public void TC8_EndToEndUserCycleTest(){
+    public void tc8_EndToEndUserCycleTest(){
         Pg00_HomePage homePage = new Pg00_HomePage(driver);
         String orderReferenceCodeInConfirmationPage =homePage.load()
                 .clickOnHomePageSignInButton()
@@ -141,7 +141,7 @@ public class TClass3_PurchasingTestScenarios extends BaseTest {
         Pg12_OrderConfirmationPage confirmationPage = new Pg12_OrderConfirmationPage(driver);
         String orderReferenceCodeInAccountHistoryPage = confirmationPage
                 .clickOnMyAccountPage()
-                .clickOnOrderHistoryDetails()
+                .clickOnOrderHistoryDetailsTab()
                 .gettingRequestedOrderText();
 
 

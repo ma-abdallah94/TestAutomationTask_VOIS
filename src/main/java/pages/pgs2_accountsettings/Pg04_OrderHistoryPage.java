@@ -12,6 +12,7 @@ public class Pg04_OrderHistoryPage {
         this.driver=driver;
     }
 
+    // The Function Retrieving the first element , the table is ordered ASC by default
     public String gettingRequestedOrderText(){
         return driver.findElement(firstKnownOrderReferenceText).getText();
     }

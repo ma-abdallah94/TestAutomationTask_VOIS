@@ -2,6 +2,7 @@ package testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import pages.pgs0_home.Pg00_HomePage;
 import testdatautils.GettingPropertyData;
 
@@ -19,7 +20,7 @@ public class TClass1_NewAccountCreationTest extends BaseTest {
 
     // This test will run one time for each email entry
     @Test (description = "This Test Is To Validate Account Creation Using Property File " )
-    public void TC0_CreateNewAccountUsingPropertyEmail(){
+    public void tc0_CreateNewAccountUsingPropertyEmail(){
         Pg00_HomePage pg0HomePage = new Pg00_HomePage(driver);
         String actualResult = pg0HomePage.load()
                 .clickOnHomePageSignInButton()
@@ -39,8 +40,8 @@ public class TClass1_NewAccountCreationTest extends BaseTest {
                                 ,GettingPropertyData.mobilePhone())
                 .clickOnRegisterButton()
                 .getMyAccountPageTitle();
-
-        Assert.assertEquals(actualResult
+        SoftAssert softAssert =new SoftAssert();
+        softAssert.assertEquals(actualResult
                 ,"My account - My Store"
                 , "The Account Is Not Created ");
     }
@@ -48,7 +49,7 @@ public class TClass1_NewAccountCreationTest extends BaseTest {
 
     // In this test I Only Changed the email , We can change other data entries with faker as we wish
     @Test (description = "This Test Is To Validate Account Creation Using Fake Email Address Using JavaFaker ")
-    public void TC1_CreateNewAccountUsingFakeEmailAddress(){
+    public void tc1_CreateNewAccountUsingFakeEmailAddress(){
         Pg00_HomePage pg0HomePage = new Pg00_HomePage(driver);
         String actualResult = pg0HomePage.load()
                 .clickOnHomePageSignInButton()

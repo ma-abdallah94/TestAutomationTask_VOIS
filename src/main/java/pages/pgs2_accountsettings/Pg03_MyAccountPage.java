@@ -20,17 +20,20 @@ public class Pg03_MyAccountPage  {
         this.driver=driver;
     }
 
+    // Get MyAccount Page Title To Validate Visiting or Successful Login/Registration
     public String getMyAccountPageTitle(){
         return driver.getTitle();
     }
 
-    public Pg04_OrderHistoryPage clickOnOrderHistoryDetails() {
+    //To Check the purchasing table
+    public Pg04_OrderHistoryPage clickOnOrderHistoryDetailsTab() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(orderHistoryAndDetailsBtn));
         driver.findElement(orderHistoryAndDetailsBtn).click();
         return new Pg04_OrderHistoryPage (driver);
     }
 
+    //Common method between Homepage and My Account Page
     public Pg05_BlousesPage selectingBlousesInWomenSection(){
         WebElement womenSectionElement = driver.findElement(headerWomenSection);
         Actions actions = new Actions(driver);

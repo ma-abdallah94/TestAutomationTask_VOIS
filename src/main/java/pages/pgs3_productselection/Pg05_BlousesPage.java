@@ -15,10 +15,12 @@ public class Pg05_BlousesPage {
         this.driver= driver ;
     }
 
+    // To Validate page is reached
     public String getBlousesPageTitle(){
         return driver.getTitle();
     }
 
+    // Selecting Blouse from Women Section
     public Pg06_BlousePreviewPage selectBlouseProduct(){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOfElementLocated(blouseProductPriceBox));
