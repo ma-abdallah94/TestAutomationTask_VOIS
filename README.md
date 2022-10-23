@@ -2,13 +2,14 @@
  Testing high level scenarios on http://automationpractice.com/index.php e-commerce website using Selenium
  , TestNG by applying OOP and applying some of the best practices according to my current knowledge . 
  
-# The Required Tasks :- 
+# Task Requirements  :- 
 1. Create a new account user (Bonus Task)
 2. Select “Blouses” Subcategory in “Women” Category
 3. Select resulted product
 4. Follow checkout procedure
 5. Confirm order by selecting bank wire option
-6. Validate order was placed from order history page.
+6. Validate order was placed from order history page. 
+By Using TestNG , DDT Way And  Design Pattern 
 
 # Project Details :-
 * Programming Language: Java Maven Project 
