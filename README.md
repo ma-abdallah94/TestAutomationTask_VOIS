@@ -23,7 +23,7 @@ By Using TestNG , DDT Way And  Design Pattern
 * Browser Resolution : 1024x768 px
 * Waits : Explicitly/Fluent Waits 
 * Challenges :- 
-  * Reading Text Inside <br> Tag In The Confirmation Page . 
+  * Reading Text Inside (br) Tag In The Confirmation Page . 
   * Splitting Order Confirmation Reference Code Text . 
 * Solutions :- 
   * Using Searching And Solution Found By Using .getAttribute("InnerHTML") function to retrieve the text 
