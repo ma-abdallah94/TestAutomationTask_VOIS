@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 
 
 /**
- * A Point of View : Sometimes we don't have to create the BaseTest Class and initialize driver At any Test class
+ * A Point of View : Sometimes we don't have to create the BaseTest Class and instantiate driver At any Test class
  * so using baseTest in case we are building  a full framework dealing with cookies ,cucumber , screenshots,..etc
  * For more code organizing and declaring WebDriver driver once per TestClass .
  */
