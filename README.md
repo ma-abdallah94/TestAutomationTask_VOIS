@@ -17,6 +17,7 @@
 * IDE : Intellij
 * Frameworks : Selenium 4.4 + TestNG 7.0.0 
 * Data Driven Methodology : By Using Properties
+* Number of Pages : 13
 * Number Of Test Classes : 3 
 * Number Of Test Cases : 9 
 * Design Pattern : Fluent Page Object Model & Builder Pattern
