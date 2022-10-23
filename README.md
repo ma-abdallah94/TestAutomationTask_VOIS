@@ -9,13 +9,14 @@
 4. Follow checkout procedure
 5. Confirm order by selecting bank wire option
 6. Validate order was placed from order history page. 
-By Using TestNG , DDT Way And  Design Pattern 
+
+- Using TestNG , DDT Way And a Design Pattern 
 
 # Project Details :-
 * Programming Language: Java Maven Project 
 * IDE : Intellij
 * Frameworks : Selenium 4.4 + TestNG 7.0.0 
-* Dada Driven Methodology : By Using Properties
+* Data Driven Methodology : By Using Properties
 * Number Of Test Classes : 3 
 * Number Of Test Cases : 9 
 * Design Pattern : Fluent Page Object Model & Builder Pattern
