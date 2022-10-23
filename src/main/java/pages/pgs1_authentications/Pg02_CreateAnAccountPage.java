@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.pgs2_accountsettings.Pg03_MyAccountPage;
-
 import java.time.Duration;
 
 
@@ -33,7 +32,7 @@ public class Pg02_CreateAnAccountPage {
     }
 
     /* The purpose of this method is to shortcut the registration steps into one step taking all
-     the data to minimize the maximum number of UI steps to maintain the test performance .   */
+     the data to minimize the number of UI steps in Test Cases   */
     public Pg02_CreateAnAccountPage accountRegistration(String firstName , String lastName , String password , String birthDay
             , String birthMonth , String birthYear , String address , String cityName , String stateName
             , String zipCode , String countryName , String mobilePhoneNumber ){
@@ -119,7 +118,4 @@ public class Pg02_CreateAnAccountPage {
         driver.findElement(registerButton).click();
         return new Pg03_MyAccountPage(driver);
     }
-
-
-
 }

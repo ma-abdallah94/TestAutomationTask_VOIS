@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.pgs1_authentications.Pg01_AuthenticationPage;
-
 import java.time.Duration;
 
 public class Pg07_ShoppingCartPage {
@@ -30,7 +29,4 @@ public class Pg07_ShoppingCartPage {
         driver.findElement(proceedToCheckOutSummary).click();
         return new Pg08_DeliveryAddressPage(driver);
     }
-
-
-
 }

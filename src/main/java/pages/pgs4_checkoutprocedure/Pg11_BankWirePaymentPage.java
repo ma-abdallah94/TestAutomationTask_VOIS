@@ -21,8 +21,4 @@ public class Pg11_BankWirePaymentPage {
         driver.findElement(iConfirmMyOrderButton).click();
         return new Pg12_OrderConfirmationPage(driver);
     }
-
-
-
-
 }

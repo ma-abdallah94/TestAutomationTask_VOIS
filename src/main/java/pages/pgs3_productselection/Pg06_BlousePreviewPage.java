@@ -33,8 +33,4 @@ public class Pg06_BlousePreviewPage {
         driver.findElement(proceedToCheckOutBtnLyr).click();
         return new Pg07_ShoppingCartPage(driver);
     }
-
-
-
-
 }

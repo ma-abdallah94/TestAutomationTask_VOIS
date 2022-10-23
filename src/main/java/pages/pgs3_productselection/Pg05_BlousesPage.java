@@ -14,6 +14,7 @@ public class Pg05_BlousesPage {
     public Pg05_BlousesPage(WebDriver driver) {
         this.driver= driver ;
     }
+
     public String getBlousesPageTitle(){
         return driver.getTitle();
     }

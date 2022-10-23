@@ -55,8 +55,6 @@ public class Pg01_AuthenticationPage {
         return new Pg03_MyAccountPage(driver);
     }
 
-
-
     public Pg08_DeliveryAddressPage clickSignInButtonForCheckoutProcedure(){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );
         wait.until(ExpectedConditions.visibilityOfElementLocated(signInBtn));
@@ -64,9 +62,6 @@ public class Pg01_AuthenticationPage {
         driver.findElement(signInBtn).click();
         return new Pg08_DeliveryAddressPage(driver);
     }
-
-
-
 
     public void setNewAccountEmail(String newEmail){
         WebDriverWait wait = new WebDriverWait(driver , Duration.ofSeconds(15) );

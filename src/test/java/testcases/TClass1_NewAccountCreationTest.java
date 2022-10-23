@@ -9,17 +9,17 @@ import testdatautils.GettingPropertyData;
 public class TClass1_NewAccountCreationTest extends BaseTest {
 
     /**
-     * The Account Creation Test Case Will be executed once per Email statically
+     * The First Account Creation Test  "TC0" Will be executed once per Email statically derived from TestData.properties
      * If we want to make it Dynamic to overcome the User state
      * We can use the Java Faker to generate random data for our test but not recommended On real business testing
      * So For running the first test case , we must change the email.
-     * The second test case is by Getting only random email address by Faker
+     * The second test case "TC1" is by Getting only random email address by Faker ( Only Email For The Current Test )
      */
 
 
     // This test will run one time for each email entry
-    @Test
-    public void createNewAccountUsingThePropertyFile(){
+    @Test (description = "This Test Is To Validate Account Creation Using Property File " )
+    public void TC0_CreateNewAccountUsingPropertyEmail(){
         Pg00_HomePage pg0HomePage = new Pg00_HomePage(driver);
         String actualResult = pg0HomePage.load()
                 .clickOnHomePageSignInButton()
@@ -42,13 +42,13 @@ public class TClass1_NewAccountCreationTest extends BaseTest {
 
         Assert.assertEquals(actualResult
                 ,"My account - My Store"
-                , "The actual result doesn't match the expected ");
+                , "The Account Is Not Created ");
     }
 
 
     // In this test I Only Changed the email , We can change other data entries with faker as we wish
-    @Test
-    public void createNewAccountUsingFakeEmailAddress(){
+    @Test (description = "This Test Is To Validate Account Creation Using Fake Email Address Using JavaFaker ")
+    public void TC1_CreateNewAccountUsingFakeEmailAddress(){
         Pg00_HomePage pg0HomePage = new Pg00_HomePage(driver);
         String actualResult = pg0HomePage.load()
                 .clickOnHomePageSignInButton()
@@ -71,7 +71,7 @@ public class TClass1_NewAccountCreationTest extends BaseTest {
 
         Assert.assertEquals(actualResult
                 ,"My account - My Store"
-                , "The actual result doesn't match the expected ");
+                , "The Account Is Not Created ");
     }
 
 
