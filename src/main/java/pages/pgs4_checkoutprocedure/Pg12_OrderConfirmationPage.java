@@ -21,7 +21,7 @@ public class Pg12_OrderConfirmationPage {
         return driver.findElement(orderCompleted).getText();
     }
 
-    /*Because Selenium cannot see or interaction with <br> elements in the DOM , I found a solution on stackoverflow
+    /*Because Selenium cannot see or interact with <br> elements in the DOM , I found a solution on stackoverflow
      This solution helped me to extract the order reference code to Assert and Validate the Order
      Link to this solution : https://stackoverflow.com/questions/63649002/text-content-located-in-second-br-tag-cant-be-printed */
     public String printInnerHTMLToGetReferenceCodeFromConfirmationPage(){
