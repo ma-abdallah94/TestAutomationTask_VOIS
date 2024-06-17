@@ -32,6 +32,5 @@
   * Reaching Sort of tutorials and accessing the documentation of getText methods .
 
 # Sequential Execution Video 
-* https://vimeo.com/763126164
 # TestNG My Results
 ![](TestResults/TestResults.png)
